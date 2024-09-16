@@ -1,3 +1,4 @@
+
 <?
     session_start();
     include_once('../Model/Model.php');
@@ -20,3 +21,4 @@
         header("location: ../controller/login.php");
     }
     var_dump($user);
+
