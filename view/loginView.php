@@ -38,7 +38,7 @@
         </div>
 
         <div id="form">
-            <form id="form" action="home.php" method="POST">
+            <form id="form" action="checkLogin.php" method="POST">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">E-mail</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -60,9 +60,22 @@
             <h3> Créer un compte ?</h3>
             <h3> Mot de passe oublié ?</h3>
         </div>
+
+        <div id="access-denied">
+        <?php
+            $message="test";
+            if(isset($message)) {
+                ?>
+            <div class="access-denied">
+                <p><?= $message ?></p>
+            </div>
+            <?php
+            }
+            ?>
+        
+        </div>
     
 </main>
-
 
 
     <!--Pied de page-->
