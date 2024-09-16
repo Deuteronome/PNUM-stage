@@ -1,24 +1,12 @@
-
-<?
-    session_start();
-    include_once('../Model/Model.php');
-    $identifier = htmlspecialchars($_POST['identifiant']);
-    $password = htmlspecialchars($_POST['password']);
-    $loginMessage = "";
-    $bdd = new Model();
-    $user = $bdd->findUserByIdentifier($identifier);
-    if(!$user){
-        $loginMessage = "not found";
-        header("location: ../controller/login.php?message=$loginMessage");
-    }
-    else if($password === $user['password']){
-        $_SESSION['userId']=$user['id'];
-        $_SESSION['identifier']=$user['firstname']." ".$user['lastname'];
-        header("location: ../controller/home.php");
-    }
-    else{
-        $loginMessage = 'mot de passe incorrect';
-        header("location: ../controller/login.php");
-    }
-    var_dump($user);
-
+<?php
+//si l'utilisateur est deja co, il est redirigé vers la page d'accueil qui correspond à son rôle
+//dans une adresse si il y a un ? c'est un get
+//gérer la variable get si il y a redirection depuis checklogin
+session_start();
+if(isset($_SESSION['userId'])){
+    header("location: ../controller/home.php");
+}
+if(isset($badUser)){
+    echo("Adresse mail ou mot de passe invalide");
+}
+require_once('../view/loginView.php');

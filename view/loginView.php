@@ -38,7 +38,7 @@
         </div>
 
         <div id="form">
-            <form id="form" action="home.php" method="POST">
+            <form id="form" action="checkLogin.php" method="POST">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">E-mail</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
