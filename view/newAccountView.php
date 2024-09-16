@@ -31,35 +31,7 @@
 
     <!--Partie Centrale-->
 <main id="center">
-    <div id="connexion">
 
-        <div id="title">
-            <h2> Connexion...</h2>
-        </div>
-
-        <div id="form">
-            <form id="form" action="home.php" method="POST">
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="save-label" for="exampleCheck1">Se souvenir de moi</label>
-            </div>
-                <button type="submit" class="btn btn-primary">Valider</button>
-            </form> 
-        </div>
-
-
-        <div>
-            <h3> Créer un compte ?</h3>
-            <h3> Mot de passe oublié ?</h3>
-        </div>
     
 </main>
 

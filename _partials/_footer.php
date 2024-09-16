@@ -1,5 +1,5 @@
 <footer>
-  
+        <link rel="stylesheet" href="../style/style.css">
 
             <div>
                 <p>Roubaix, siège social</p>

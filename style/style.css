@@ -46,10 +46,15 @@ header {
     align-items: center;
 }
 
+.header-crosse {
+
+}
+
 .logo {
     width: 10vw;
     aspect-ratio: 1;
 }
+
 
 #header-titre {
     width: 60vw;
@@ -80,7 +85,6 @@ h1 {
 
 main {
     height: 70vh;
-    position: relative;
     width: 100vw;
     padding: 30px;
     padding-left: 5vw;
@@ -129,15 +133,16 @@ label {
     margin-right: 15px;
 }
 
+.save-label {
+    font-size: 1.2rem;
+}
+
 .form-group {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
-#form-ending {
-    padding-bottom: 10px;
-}
 
 
 /* Footer */
