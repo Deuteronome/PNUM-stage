@@ -1,4 +1,5 @@
-<?php 
+<?php
+
     class Model{
         private PDO $bdd;
         public function __construct()
