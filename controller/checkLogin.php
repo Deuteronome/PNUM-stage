@@ -7,7 +7,7 @@
     $loginMessage = "";
     $bdd = new Model();
     $user = $bdd->findUserByIdentifier($identifier);
-    if($user && $password === $user['password']){
+    if($user && password_verify($password, $user['password']) ){
         $_SESSION['userId']=$user['id'];
         $_SESSION['identifier']=$user['firstname']." ".$user['lastname'];
         header("location: ../controller/home.php");
