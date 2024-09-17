@@ -40,9 +40,9 @@
             <select name="referents" id="referents" required>
         
                 <?php
-                    foreach($referents as $referents) {
+                    foreach($referents as $referent) {
                     ?>
-                        <option value="<?= $referents["id"]?>"><?=$referents["firstname"] ?>  <?= $referents['lastname']?></option>
+                        <option value="<?= $referent["id"]?>"><?=$referent["firstname"] ?>  <?= $referent['lastname']?></option>
                     <?php
                     }
                 ?>

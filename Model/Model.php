@@ -52,9 +52,9 @@
             return $req;
         }
 
-        public function createStagiaire(string $firstName,string $lastName,DateTime $dateOfBirth,int $referent,int $site,string $email,string $hashedPassword){
-            $sqlQuery = "INSERT INTO Users (firstname, lastname, date_of_birth, site_id, referent_id, email, password, role) 
-                        VALUES(:firstname, :lastname, :dateOfBirth, :referent, :site, :email, :password, :role)";
+        public function createStagiaire(string $firstName,string $lastName,$dateOfBirth,int $referent,int $site,string $email,string $hashedPassword){
+            $sqlQuery = "INSERT INTO Users (firstname, lastname, date_of_birth, site_id, referent_id, email, password, role_id) 
+                        VALUES(:firstname, :lastname, :dateOfBirth, :site, :referent, :email, :password, :role)";
             $statement=$this->bdd->prepare($sqlQuery);
             $statement->execute([
                 'firstname' => $firstName,
@@ -64,7 +64,7 @@
                 'site' => $site,
                 'email' => $email,
                 'password'=> $hashedPassword,
-                'role' => $this->getRoleId('stagiaire')
+                'role' => $this->getRoleId('Stagiaire')['id']
             ]);
         }
 
