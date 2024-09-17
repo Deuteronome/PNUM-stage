@@ -46,7 +46,7 @@
 
 
         <div>
-            <h3> Créer un compte ?</h3>
+            <a href="../controller/signUp.php"><h3> Créer un compte ?</h3></a>
             <h3> Mot de passe oublié ?</h3>
         </div>
 

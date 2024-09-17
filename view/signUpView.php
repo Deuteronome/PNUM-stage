@@ -18,6 +18,19 @@
     require_once('../_partials/_header.php');
     ?>
 <main>
+    <form action="../controller/signUpSend.php" method="post">
+        <label for="sites">Site de l'utilisateur</label>
+        <select name="site" id="sites" required>
+            <?php
+                foreach($sites as $site) {
+                ?>
+                    <option value="<?= $site["id"]?>"><?=$site["city"] ?></option>
+                <?php
+                }
+            ?>
+        </select>
+        <input type="submit" value="Envoyer">
+    </form>
 
 </main>
 
