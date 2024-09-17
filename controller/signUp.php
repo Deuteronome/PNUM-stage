@@ -14,5 +14,6 @@ if(isset($_SESSION['userId'])){
 
 
 
+
 require_once('../view/signUpView.php');
 
