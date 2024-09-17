@@ -41,11 +41,11 @@
             <form id="form" action="checkLogin.php" method="POST">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" name="identifiant" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -63,7 +63,6 @@
 
         <div id="access-denied">
         <?php
-            $message="test";
             if(isset($message)) {
                 ?>
             <div class="access-denied">
