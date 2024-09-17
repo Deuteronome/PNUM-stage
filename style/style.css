@@ -25,6 +25,9 @@ body {
 }
 
 
+
+
+
 /* Header */
 
 header {
@@ -46,9 +49,6 @@ header {
     align-items: center;
 }
 
-.header-crosse {
-
-}
 
 .logo {
     width: 10vw;
@@ -81,6 +81,9 @@ h1 {
 }
 
 
+
+
+
 /* Partie Centrale */
 
 main {
@@ -93,6 +96,32 @@ main {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+
+
+#form-sites {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 60vw;
+    opacity: 50%;
+    background-color: #131212;
+    border-top: #7654E0 solid 9px;
+    border-bottom: #7654E0 solid 9px;
+    border-left: #322d41 solid 9px;
+    border-right: #322d41 solid 9px;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+#form-sites>form {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-sites>form>#validate  {
+    margin-top: 2vw;
 }
 
 /* Fenêtre de connexion */
@@ -110,6 +139,7 @@ main {
     text-decoration: none;
     color: var(--color-blanc);
 }
+
 #title {
     font-family: 'Mondapick';  
     text-align: center;
@@ -148,6 +178,16 @@ label {
     font-family: 'coolvetica';
 }
 
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 
 
@@ -168,5 +208,10 @@ footer {
 
 footer>div {
     width: 25%;
-    padding: 10px;
+    padding: 5px;
+}
+
+#warning {
+    color: #ff0000;
+    font-size: 1.3rem;
 }
