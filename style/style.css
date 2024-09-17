@@ -101,7 +101,7 @@ main {
     display: block;
     background-color: #A7A7A7;
     width: 70%;
-    height: 60%;
+    height: 70%;
     border-radius: 20px;
     transition: box-shadow 200ms, color 1000ms,
     background-color 500ms;
@@ -143,7 +143,10 @@ label {
     margin-bottom: 15px;
 }
 
-
+#access-denied {
+    color: red;
+    font-family: 'coolvetica';
+}
 
 /* Footer */
 

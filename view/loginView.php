@@ -60,9 +60,22 @@
             <h3> Créer un compte ?</h3>
             <h3> Mot de passe oublié ?</h3>
         </div>
+
+        <div id="access-denied">
+        <?php
+            $message="test";
+            if(isset($message)) {
+                ?>
+            <div class="access-denied">
+                <p><?= $message ?></p>
+            </div>
+            <?php
+            }
+            ?>
+        
+        </div>
     
 </main>
-
 
 
     <!--Pied de page-->
