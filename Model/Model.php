@@ -51,6 +51,23 @@
             $req = $statement->fetchAll();
             return $req;
         }
+
+        public function createStagiaire(string $firstName,string $lastName,DateTime $dateOfBirth,int $referent,int $site,string $email,string $hashedPassword){
+            $sqlQuery = "INSERT INTO Users (firstname, lastname, date_of_birth, site_id, referent_id, email, password, role) 
+                        VALUES(:firstname, :lastname, :dateOfBirth, :referent, :site, :email, :password, :role)";
+            $statement=$this->bdd->prepare($sqlQuery);
+            $statement->execute([
+                'firstname' => $firstName,
+                'lastname' => $lastName,
+                'dateOfBirth' => $dateOfBirth,
+                'referent' => $referent,
+                'site' => $site,
+                'email' => $email,
+                'password'=> $hashedPassword,
+                'role' => $this->getRoleId('stagiaire')
+            ]);
+        }
+
         /*public function getSiteById(int $id)
         {
             $sqlQuery="SELECT id, city  FROM sites WHERE id= :id ";
