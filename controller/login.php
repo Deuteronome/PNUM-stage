@@ -1,7 +1,10 @@
 <?php
 
-/* Si l'utilisateur est déjà connecté, il est redirigé vers la page d'acceuil qui correspond à son rôle. */
-
-/* Gérer la variable GET si redirection depuis checkLogin.php */
-
+session_start();
+if(isset($_SESSION['userId'])){
+    header("location: ../controller/home.php");
+}
+if(isset($badUser)){
+    echo("Adresse mail ou mot de passe invalide");
+}
 require_once('../view/loginView.php');
