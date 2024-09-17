@@ -52,6 +52,7 @@
             <select name="site" id="sites" required>
         
                 <?php
+
                     foreach($sites as $site) {
                     ?>
                         <option value="<?= $site["id"]?>"><?=$site["city"] ?></option>
