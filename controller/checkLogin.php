@@ -7,18 +7,14 @@
     $loginMessage = "";
     $bdd = new Model();
     $user = $bdd->findUserByIdentifier($identifier);
-    if(!$user){
-        $loginMessage = "not found";
-        header("location: ../controller/login.php?message=$loginMessage");
-    }
-    else if($password === $user['password']){
+    if($user && $password === $user['password']){
         $_SESSION['userId']=$user['id'];
         $_SESSION['identifier']=$user['firstname']." ".$user['lastname'];
         header("location: ../controller/home.php");
     }
     else{
-        $loginMessage = 'mot de passe incorrect';
-        header("location: ../controller/login.php");
+        $loginMessage = "ERREUR";
+        header("location: ../controller/login.php?message=$loginMessage");
     }
     var_dump($user);
 
