@@ -10,14 +10,17 @@
             </div>
         </div>
         <?php
-        if(isset($_SESSION['userId'])){        
+        if(isset($_SESSION['userId'])){  
         ?>
         <div class="header-logo">
             <img src="../assets/avatars/avatar_1.png" alt="Logo" class="logo">
+            <div class="header-crosse">
+            <img src="../assets/avatars/crosse_icon.png" alt="Logo" class="logo"></a>
         </div>
-        <div class="header-crosse">
-            <img src="../assets/avatars/crosse_icon.png" alt="Logo" class="logo">
         </div>
+
+            <a href="../controller/logOut.php" class="button-menu">Déconnecter</a>
+
         <?php
         } else {
          ?>
